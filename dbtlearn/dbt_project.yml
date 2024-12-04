@@ -20,6 +20,7 @@ macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 asset-paths: ["assets"]
 
+target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
@@ -41,4 +42,5 @@ models:
     src:
       +materialized: ephemeral
 
-      
+vars:
+  user_name: default_user_name_for_this_project   

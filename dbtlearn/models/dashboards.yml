@@ -1,0 +1,17 @@
+version: 2
+
+exposures:
+  - name: executive_dashboard
+    label: Executive Dashboard
+    type: dashboard
+    maturity: low
+    url: https://802ab14c.us2a.app.preset.io/superset/dashboard/p/3QwMgBXRozp/
+    description: Executive dashboard about Air BnB listings and hosts
+
+    depends_on:
+      - ref('dim_listings_with_hosts')
+      - ref('mart_full_moon_reviews')
+
+    owner:
+      name: Nick Ibbotson
+      email: nickibbotson7@gmail.com
